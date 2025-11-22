@@ -30,7 +30,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 px-6">
       <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-5xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Let's Work Together
         </h2>
 
