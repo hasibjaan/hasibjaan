@@ -3,6 +3,9 @@
   <img src="public/portfolio_website_banner.png" alt="Portfolio Banner" width="60%" />
 </p>
 
+
+[![Preview](https://img.shields.io/badge/✨%20Live%20Preview-View%20Site-purple?style=for-the-badge&logo=vercel&logoColor=white&labelColor=4B0082&color=8A2BE2)](https://portfolio-site-self-omega.vercel.app/)
+
 # 🚀 My Portfolio Website
 
 ### A modern, high-performance personal portfolio showcasing my skills, projects, and professional journey.
