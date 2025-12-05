@@ -5,32 +5,36 @@ import { Briefcase, ExternalLink } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with real-time inventory management and secure payment processing.",
-      tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-      link: "#",
-      image: "/ecommerce.webp" 
+      title: "Mirabel Beauty Salon",
+      description: "A modern, elegant website for Mirabel Beauty Salon, featuring services, booking capabilities, and a showcase of their work.",
+      tech: ["Next.js", "React", "Tailwind CSS"],
+      link: "https://mirabel-beauty-salon.vercel.app/",
+      image: "/mirabel-salon.png",
+      openInNewTab: true
     },
     {
-      title: "AI Content Generator",
-      description: "Machine learning powered content creation tool with natural language processing capabilities.",
-      tech: ["React", "Python", "TensorFlow", "FastAPI"],
-      link: "#",
-      image: "/ai-content.jpeg"
+      title: "Tekitool Solutions",
+      description: "A dynamic website for a social media and marketing agency, showcasing their strategies and client success stories.",
+      tech: ["Next.js", "React", "Tailwind CSS"],
+      link: "https://tekitool-site.vercel.app/",
+      image: "/tekitool-solutions.png",
+      openInNewTab: true
     },
     {
       title: "Task Management App",
       description: "Collaborative project management platform with real-time updates and team synchronization.",
       tech: ["Vue.js", "Firebase", "Tailwind CSS"],
       link: "#",
-      image: "/task-app.jpeg"
+      image: "/task-app.jpeg",
+      openInNewTab: true
     },
     {
       title: "Analytics Dashboard",
       description: "Real-time data visualization dashboard with interactive charts and customizable widgets.",
       tech: ["React", "D3.js", "GraphQL", "PostgreSQL"],
       link: "#",
-      image: "/analytics.png"
+      image: "/analytics.png",
+      openInNewTab: true
     }
   ];
 
@@ -49,13 +53,13 @@ export default function Projects() {
               <div className="grid md:grid-cols-2">
                 {/* Image Section */}
                 <div className="relative h-64 md:h-auto overflow-hidden group">
-                  <img 
+                  <img
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-purple-900/40 via-transparent to-transparent"></div>
-                  
+
                   {/* Briefcase Icon Overlay */}
                   <div className="absolute top-4 left-4 p-2 rounded-full backdrop-blur-xl bg-white/10 border border-purple-500/30">
                     <Briefcase className="text-white-300" size={14} />
@@ -67,8 +71,10 @@ export default function Projects() {
                   <div>
                     <div className="flex justify-between items-start mb-3">
                       <h3 className="text-xl font-bold">{project.title}</h3>
-                      <a 
-                        href={project.link} 
+                      <a
+                        href={project.link}
+                        target={project.openInNewTab ? "_blank" : undefined}
+                        rel={project.openInNewTab ? "noopener noreferrer" : undefined}
                         className="text-purple-400 hover:text-purple-300 transition-colors hover:scale-110 transform duration-300"
                       >
                         <ExternalLink size={20} />
@@ -76,7 +82,7 @@ export default function Projects() {
                     </div>
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">{project.description}</p>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech, techIdx) => (
                       <span
